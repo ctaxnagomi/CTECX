@@ -1,0 +1,50 @@
+{
+  "name": "ctecx---ai-coordination-infrastructure",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:analyze": "cross-env ANALYZE=true npm run build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext .ts,.tsx,.js --report-unused-disable-directives --max-warnings=0",
+    "lint:fix": "eslint . --ext .ts,.tsx,.js --fix",
+    "format": "prettier --write \"**/*.{js,ts,tsx,json,md}\"",
+    "prepare": "husky install",
+    "deploy": "npx wrangler deploy",
+    "deploy:pages": "npx wrangler pages publish ./dist --project-name <project-name>"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.md": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@google/genai": "^1.34.0",
+    "lucide-react": "^0.562.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.0",
+    "eslint": "^8.50.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "eslint-plugin-react": "^7.33.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "prettier": "^2.8.8",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^14.0.0",
+    "rollup-plugin-visualizer": "^5.10.0",
+    "cross-env": "^7.0.3"
+  }
+}

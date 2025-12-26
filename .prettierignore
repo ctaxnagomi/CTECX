@@ -1,0 +1,6 @@
+dist
+node_modules
+.vite
+.build
+public
+assets/*.mp4

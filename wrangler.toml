@@ -1,0 +1,13 @@
+# Minimal wrangler.toml for building and publishing the Vite `dist` folder
+# Replace <YOUR_ACCOUNT_ID> and <PROJECT_NAME> with your Cloudflare account/project details
+
+name = "ctecx"
+account_id = "<YOUR_ACCOUNT_ID>"
+compatibility_date = "2025-12-26"
+type = "javascript"
+
+[build]
+command = "npm run build"
+
+[site]
+bucket = "./dist"
