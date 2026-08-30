@@ -1,6 +1,6 @@
 
 
-## Build & manual upload
+## Build & manual uploads
 
 If your uploader doesn't run a build step (it detected TypeScript files), build locally and upload the generated `dist` directory.
 
