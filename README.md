@@ -1,5 +1,9 @@
 # CTECX
 
+<p align="center">
+  <img src="./assets/ctecx_official_logo_01_badge.png" height="80" alt="CTECX" title="CTECX" />
+</p>
+
 **AI Coordination Infrastructure**
 
 CTECX is the development and coordination layer for agentic AI ecosystems. It focuses on building practical tools and infrastructure that enable reliable human-AI collaboration across cloud, local, and enterprise environments.
