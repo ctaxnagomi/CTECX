@@ -41,7 +41,12 @@ ctecx-tk init-language ctecx-lang
 ctecx-tk instruct --task-id ctecx-example-001 your-task-log.md
 ```
 
-Follow-up delivery: the **CTECX ADE + IDE** built on this toolkit.
+Follow-up delivery: the **CTECX ADE + IDE** is now built on this toolkit — one
+shared "CTECX script" engine (`.ctk`) driving an interactive **IDE** (incremental
+syntax, diagnostics, hover, completion, JSON-lines language server) and an
+**ADE** (observe → act → verify agent harness with a tool allowlist, a human
+gate for destructive steps, and `agent_memory` SQLite persistence). Every task is
+logged with the `ctecx_instruct` pack format.
 
 ## Related Project: OpenDGUI (DeckerGUI Prototype)
 
