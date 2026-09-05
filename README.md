@@ -10,6 +10,39 @@ CTECX is the development and coordination layer for agentic AI ecosystems. It fo
 
 This repository currently hosts the CTECX corporate website and related coordination interfaces.
 
+## CTECX Developer Toolkit
+
+The **CTECX Developer Toolkit** is the unified reference implementation for
+building developer tooling on the CTECX platform: **IDE** components, an
+**ADE (Agentic Development Environment)** harness, and a **scripting/language
+workbench** that runs from **assembly** up through a custom language runtime.
+
+Owning identity: **wan mohd azizi bin wan hosen, ctaxnagomi, est 2024**.
+
+### What is included
+
+- **Research pack** — grounded notes on x86-64 assembly & machine code, language
+  design (lexer → parser → AST → bytecode VM), the Tree-sitter + LSP hybrid IDE
+  architecture vs the ADE agent loop, and the Electron vs Tauri (2.0) shell choice.
+- **`ctecx-tk` CLI** (Python 3.9+, stdlib-only)
+  - `ctecx-tk init-ide <name>` — scaffold an IDE (incremental parser + LSP stub)
+  - `ctecx-tk init-ade <name>` — scaffold an agentic dev environment harness
+  - `ctecx-tk init-language <name>` — scaffold a language workbench with a working bytecode VM
+  - `ctecx-tk instruct INSTRUCT.md` — pack a task log into the `ctecx_instruct`
+    format (five parts: `.md` `.sh` `.sql` `.json` `.assembly`, zipped)
+- **Samples** — `hello_x64.asm` (syscall-only x86-64), a Rust tokenizer, a
+  minimal Electron main, a Tauri 2.0 shell config, and an ADE agent harness.
+
+### Quick start
+
+```bash
+pip install -e ./ctecx-developerToolKit/python
+ctecx-tk init-language ctecx-lang
+ctecx-tk instruct --task-id ctecx-example-001 your-task-log.md
+```
+
+Follow-up delivery: the **CTECX ADE + IDE** built on this toolkit.
+
 ## Related Project: OpenDGUI (DeckerGUI Prototype)
 
 OpenDGUI is the portable prototype of the DeckerGUI vision. It delivers a fully offline, local-first AI workspace that can be carried on a USB pendrive (16 GB minimum, 32 GB recommended).
